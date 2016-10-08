@@ -8,12 +8,9 @@ class db-server {
 		ensure => installed,
 	}
 
-	service { 'mysql':
-		ensure => running,
-	}
-
 	file { '/etc/my.cnf':
 		ensure => file,
+		mode => '0644',
 		content => '[mysqld]
 		log-bin=mysql-bin
 		expire-logs-days=14
