@@ -7,7 +7,4 @@ class webserver-nodejs {
 		ensure => installed,
 	}
 
-	service { 'nodejs': 
-		ensure => running,
-	}
 }
